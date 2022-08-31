@@ -1,0 +1,37 @@
+body {
+    background-image: linear-gradient(to right,#aaffcc,#ddccaa);
+    /* background-repeat: no-repeat; */
+}
+.btn {
+    background-color: turquoise;
+    text-align: center;
+    font-size: medium;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn:hover {
+    background-color: lightgray;
+    border-color: lightcyan;
+}
+
+.btnt {
+    background-color: lightslategray;
+    text-align: center;
+    font-size: medium;
+    margin-bottom: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+label {
+    font-weight: bold;
+    font-size: medium;
+    /* font-weight: 100; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btnt:hover {
+    background-color: lightgray;
+    border-color: aliceblue;
+}

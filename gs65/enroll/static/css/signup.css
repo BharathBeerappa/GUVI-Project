@@ -1,0 +1,53 @@
+body {
+    background-image: radial-gradient(rgb(121, 157, 181),rgb(90, 175, 170));
+    margin: auto;
+}
+
+.submit { 
+    background-color: aqua;
+
+    width: 200px;
+    padding: 10px;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    list-style-type: none;
+    transition-duration: 0.3 sec;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.submit:hover {
+    background-image: linear-gradient(gray,rgb(212, 230, 171));
+    border-color: chartreuse;
+    color: cadetblue;
+}
+
+.look {
+    font-size: medium;
+    font-weight: bold;
+    border: 3px solid black;
+    padding: 4px;
+    color: gray;
+    background-color: lightgoldenrodyellow;
+}
+
+.look:hover {
+    border-color: blue;
+    border:10px;
+    background-image: radial-gradient(rgb(200, 202, 30),rgb(115, 236, 127));
+}
+
+p {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+label {
+    padding-right: 80px;
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+

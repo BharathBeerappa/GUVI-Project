@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="{% static 'css/profile.css'%}">
+ <title>User Profile</title>
+</head>
+<body>
+ <h1>Profile Page</h1>
+ <h3>Welcome {{name}}</h3>
+ {% if messages %}
+  {% for message in messages %}
+   <strong {% if message.tags %} {% endif %} class="msg">{{message}}</strong>
+  {% endfor %}
+ {% endif %}
+ <form action="" method="post" novalidate>
+  {% csrf_token %}
+  {% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+       <p class="msg">{{ error }}</p><br>
+    {% endfor %}
+  {% endif %}
+
+  {% for fm in form %}
+   {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br> <br>
+  {% endfor %}
+  <!-- <input type="submit" value="Save"> -->
+  <button class="btn">Save</button><br>
+ </form>
+ <br>
+  <!-- <span class="pass"> -->
+  <button class="pass"><a href="{% url 'changepass' %}" id="pass">Change Password</a></button>
+  <!-- </span> -->
+  <!-- <div class="logout"> -->
+ <button class="pass"><a href="{% url 'logout' %}">Logout</a></button>
+ </div>
+</body>
+</html>

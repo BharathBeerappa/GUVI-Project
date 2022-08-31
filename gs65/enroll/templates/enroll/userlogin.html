@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="{% static 'css/login.css' %}">
+ <title>User Login</title>
+ <style>
+ .er{
+  color:red;
+ }
+ </style>
+</head>
+<body>
+ <form action="" method="post" novalidate>
+  {% csrf_token %}
+  {% if form.non_field_errors %}
+   {% for error in form.non_field_errors %}
+    <p class="er">{{error}}</p>
+   {% endfor %}
+  {% endif %}
+  {% for fm in form %}
+   {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br><br>
+  {% endfor %}
+  <!-- <input type="submit" value="Login"> -->
+  <button class="btn">Login</button>
+ </form>
+
+ <button class="btnt"><a href="{% url 'signup' %}">Signup</a></<button>
+
+ </body>
+</html>
